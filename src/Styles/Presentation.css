@@ -1,0 +1,96 @@
+@media screen and (min-width: 720px) {
+
+}
+
+@media screen and (min-width: 1020px) {
+    .presentation-section {
+        color: black;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 8rem;
+        border: 3px solid black;
+        padding: 2rem 0;
+        border-radius: 36px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .presentation-section-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5rem;
+    }
+
+    .presentation-section-info h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+        transition: width .2s ease-in-out;
+    }
+
+    .presentation-section-info p{
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        max-width: 45rem;
+    }
+
+    .presentation-section-info li{
+        display: flex;
+        margin-top: 1.5rem;
+    }
+
+    .presentation-section-info a{
+        text-decoration: none;
+        color:#3d2d31;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        margin-right: 3rem;
+    }
+
+    .social-group__icon {
+        fill: #191308;
+        transition: all .2s;
+    }
+    
+    .social-group__inner-circle {
+        fill: transparent;
+        transition: all .2s;
+    }
+    
+    .social-group__outline {
+        stroke: #191308;
+        transform-origin: 50% 50%;
+        transition: all .2s;
+    }
+
+    .social-group__icon:hover:active:focus {
+        fill: #64a19a;;
+        transition: all .45s;
+    }
+    
+    .social-group__inner-circle:hover:active:focus {
+        fill: #64a19a;;
+        transition: all .45s;
+    }
+    
+    .social-group__outline:hover:active:focus {
+        stroke: currentColor;
+        transform: scale(1.1);
+        transition: all .45s;
+    }
+    
+    .presentation-section-img {
+        display: flex;
+        border-radius: 20rem;
+        border: 0.3rem #3d2d31 dashed;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .presentation-section-img img {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 20rem;
+        object-fit: fill;
+    }
+}

@@ -1,0 +1,27 @@
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    text-align: center;
+}
+.projects-section-title{
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.single-Project {
+    display: flex;
+    border: 1px solid rgb(54, 28, 14);
+}
+
+
+.single-Project img {
+    max-height: 30rem;
+    object-fit: scale-down;
+}
+
+.single-Project-description {
+    
+}

@@ -1,0 +1,22 @@
+.techStack-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.techStack-section h2{
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.techStack-section-list {
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    list-style: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
