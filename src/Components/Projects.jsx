@@ -1,54 +1,65 @@
-import blogPhoto from '../Images/blog.png'
-import storePhoto from '../Images/store.png'
-import youtubePhoto from '../Images/youtube.png'
+import storeImg from '../img/store.png'
+import blogImg from '../img/blog.png'
+import youtubeImg from '../img/youtube.png'
 import '../Styles/Projects.css';
 
+const projects = [
+    {
+      image: {storeImg},
+      name: 'Online Store',
+      link: 'http://ec2-16-171-2-140.eu-north-1.compute.amazonaws.com/',
+      description:
+      'Full-stack application from scratch. This is an e-commerce furniture store with own database',
+      tags: ['React','Bootstrap', 'Express', 'RESTful APIs', 'MongoDB']
+    },
+    {
+      image: {youtubeImg},
+      name: 'Catatube',
+      link: 'https://mashidzasupergirl.github.io/FilmLoversProject/',
+      description:
+        'Fullstack application created in 12 hours for hackday, Can make any request directly to youtube',
+      tags: ['React','CSS', 'Express', 'RESTful APIs']
+    },
+    {
+      image: {blogImg},
+      name: 'Blog Site',
+      link: 'https://mashidzasupergirl.github.io/ToDoList/',
+      description:
+        'Blogpost Front end application created to display post from external Api to practice Typescript',
+      tags: ['React', 'CSS', 'Typescript'],
+    },
+    {
+      image: {blogImg},
+      name: 'Metrieve (private repo)',
+      link: 'https://mashidzasupergirl.github.io/ToDoList/',
+      description:
+        'MVP Fullstack App for Egipt company based in Stockholm',
+      tags: ['React', 'SCSS', 'Typescript','Node', 'PostgreSQL', 'Next'],
+    }
+];
 const Projects = () => {
   return (
-    <main className='projects-section'>
-      <section className='projects-section-details'>
-        <article className='single-Project'>
-        <img src={storePhoto}/>
-          <div className='single-Project-description'>
-            <h1>E-commerce</h1>
-            <p>Fullstack online Store with login and Cart implementation</p>
-            <li className='single-Project-description-tech'>
-              <ul>React</ul>
-              <ul>Bootstrap</ul>
-              <ul>CSS</ul>
-              <ul>Express</ul>
-              <ul>MongoDB</ul>
-            </li>
+    projects.map((item) => {
+      return (
+        <a href={item.link} rel="noopener">
+        <div className="card">
+          <div className="image-container">
+            <img src={item.image} alt='project demo img'/>
           </div>
-        </article>
-        <article className='single-Project'>
-          <img src={blogPhoto}/>
-          <div className='single-Project-description'>
-            <h1>Blog Page</h1>
-            <p>Website for blog post sharing</p>            
-            <li className='single-Project-tech'>
-            <ul>React</ul>
-            <ul>Typescript</ul>
-            <ul>CSS</ul>
-          </li>
+          <div className="card-text">
+            <h2>{item.name}</h2>
+            <p>
+              {item.description}
+              <span className="arrow-link">&gt;&gt;</span>
+            </p>
           </div>
-        </article>
-        <article className='single-Project'>
-          <img src={youtubePhoto}/>
-          <div className='single-Project-description'>
-            <h1>Catatube</h1>
-            <p>MVP fullstack youtube clone connected to the youtube API on the backend</p>            
-            <li className='single-Project-tech'>
-            <ul>React</ul>
-            <ul>Typescript</ul>
-            <ul>CSS</ul>
-            <ul>Express</ul>
-          </li>
+          <div className="tags-container" id="tags">
+            {item.tags.map((tag) => <span className="tags">{tag}</span>)}
           </div>
-        </article>
-      </section>
-    </main>
-  )
+        </div>
+        </a>
+      )
+    }))
 }
 
 export default Projects

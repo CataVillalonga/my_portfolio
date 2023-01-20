@@ -1,5 +1,4 @@
 import '../Styles/TechStack.css';
-import jsLogo from '../logos/js5.png'
 
 const TechStack =() => {
   return (
