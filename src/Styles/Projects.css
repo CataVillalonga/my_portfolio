@@ -30,6 +30,7 @@
     border-radius: 1rem;
     transition: all 0.3s ease-in-out;
     margin: 0 1rem;
+    max-height: 35rem;
 }
 
 .project-card:hover {
