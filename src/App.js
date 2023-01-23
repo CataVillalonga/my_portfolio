@@ -13,7 +13,7 @@ function App() {
     <Presentation/>
     <TechStack />
     <Projects />
-    < Collaborations />
+    <Collaborations />
     </>
   );
 }
