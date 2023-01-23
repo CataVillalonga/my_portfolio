@@ -48,6 +48,7 @@ const projects = [
     }
 ];
 
+const Projects = ()=> {
   return (
     <>
     <div id='projects' className='projects-title'>
@@ -55,8 +56,9 @@ const projects = [
     </div>
     <section className='projects-container'>
       {projects.map((project, i) => {
+
       return (
-        <a href={project.link} rel="noopener" target="_blank">
+        <a href={project.link} rel="noopener noreferrer" target="_blank">
           <article key={project.link}className="project-card"  url="https://www.google.com">
               <div className="project-card-img">
                 <img src={project.image} alt='project demo img'/>
@@ -79,4 +81,4 @@ const projects = [
   )
 }
 
-export default Projects
+export default Projects;
