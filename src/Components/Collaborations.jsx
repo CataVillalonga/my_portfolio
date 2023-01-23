@@ -10,9 +10,9 @@ const Collaborations =() => {
         <h1>Collaborations</h1>
       </div>
       <div className='collaborations-section-imgs'>
-      <img id='smartcoding'src={smartCodingLogo}/>
-      <img src={metrieveLogo}/>
-      <img src={saltLogo}/>
+      <img alt='smartcoding'id='smartcoding'src={smartCodingLogo}/>
+      <img alt='Metrieve'src={metrieveLogo}/>
+      <img  alt='Salt'src={saltLogo}/>
       </div>
     </section>
   )
