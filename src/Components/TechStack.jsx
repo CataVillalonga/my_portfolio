@@ -9,6 +9,7 @@ const TechStack =() => {
         <ul>Typescript</ul>
         <ul>React</ul>
         <ul>Redux</ul>
+        <ul>Next</ul>
         <ul>CSS</ul>
         <ul>SCSS</ul>
         <ul>Bootstrap</ul>
