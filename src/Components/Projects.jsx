@@ -47,11 +47,6 @@ const projects = [
       tags: ['html', 'CSS', 'Javascript']
     }
 ];
-const Projects = () => {
-  const projectHandler = (e) => {
-    e.preventDefault();
-    console.log(e.url)
-  }
 
   return (
     <>
@@ -60,7 +55,6 @@ const Projects = () => {
     </div>
     <section className='projects-container'>
       {projects.map((project, i) => {
-        console.log(project.link)
       return (
         <a href={project.link} rel="noopener" target="_blank">
           <article key={project.link}className="project-card"  url="https://www.google.com">
