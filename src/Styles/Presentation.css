@@ -1,96 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 @media screen and (min-width: 720px) {
 
 }
 
 @media screen and (min-width: 1020px) {
-    .presentation-section {
-        color: black;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        margin: 8rem;
-        border: 3px solid black;
-        padding: 2rem 0;
-        border-radius: 36px;
-        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    }
 
-    .presentation-section-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 5rem;
-    }
+	.presentation-wrapper {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background: rgb(48, 48, 48);
+	}
 
-    .presentation-section-info h1 {
-        font-size: 3.5rem;
-        font-weight: 600;
-        transition: width .2s ease-in-out;
-    }
+	.card-wrapper {
+		width: 100%;
+		height: 100%;
+		color: rgb(248, 235, 212);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: black;
+		opacity: 0;
+		animation: 4s cardDisplay 0.5s forwards;
+		font-family: 'Expletus Sans', cursive;
+	}
 
-    .presentation-section-info p{
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
-        max-width: 45rem;
-    }
+	.personalDetails-Wraper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 25px;
+	}
 
-    .presentation-section-info li{
-        display: flex;
-        margin-top: 1.5rem;
-    }
+	.card-description {
+		font-size: 25px;
+	}
 
-    .presentation-section-info a{
-        text-decoration: none;
-        color:#3d2d31;
-        font-size: 1.5rem;
-        font-weight: 700;
-        cursor: pointer;
-        margin-right: 3rem;
-    }
+	.card-name {
+		font-size: 60px;
+		font-weight: 900;
+		margin: 30px;
+	}
 
-    .social-group__icon {
-        fill: #191308;
-        transition: all .2s;
-    }
-    
-    .social-group__inner-circle {
-        fill: transparent;
-        transition: all .2s;
-    }
-    
-    .social-group__outline {
-        stroke: #191308;
-        transform-origin: 50% 50%;
-        transition: all .2s;
-    }
+	.presentation-wrapper::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -50%;
+		animation: introLineLeft 5.0s forwards;
+		border-right: 2px solid white;
+		background: rgb(48, 48, 48);
+		z-index: 1;
+	}
 
-    .social-group__icon:hover:active:focus {
-        fill: #64a19a;;
-        transition: all .45s;
-    }
-    
-    .social-group__inner-circle:hover:active:focus {
-        fill: #64a19a;;
-        transition: all .45s;
-    }
-    
-    .social-group__outline:hover:active:focus {
-        stroke: currentColor;
-        transform: scale(1.1);
-        transition: all .45s;
-    }
-    
-    .presentation-section-img {
-        display: flex;
-        border-radius: 20rem;
-        border: 0.3rem #3d2d31 dashed;
-        width: 20rem;
-        height: 20rem;
-    }
+	.presentation-wrapper::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: -50%;
+		animation: introLineRight 5.0s forwards;
+		border-left: 2px solid white;
+		background: rgb(48, 48, 48);
+	}
 
-    .presentation-section-img img {
-        width: 20rem;
-        height: 20rem;
-        border-radius: 20rem;
-        object-fit: fill;
-    }
+	.card-wrapper img {
+		width: 100px;
+		height: 100px;
+		bottom: 0;
+	}
+
+	.glowingEffect-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 60px;
+	}
+	
+	.glowingEffect-btn-a {
+		text-decoration: none;
+		color: rgb(216, 220, 158);
+		font-family: sans-serif;
+		font-size: 20px;
+		border: 2px solid rgb(216, 220, 158);
+		padding: 15px 30px;
+		transition: all 0.5s;
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.glowingEffect-btn-a:hover{
+		background: rgb(42, 41, 41)
+	}
+	
+	.glowingEffect-btn-a::before{
+		content: '';
+		background: rgb(216, 220, 158);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		transform: translateX(-100%) rotate(45deg);
+		transition: all 0.5s;
+	}
+	
+	.glowingEffect-btn-a:hover:before{
+		transform: translateX(100%) rotate(45deg);
+	}
+
+	
+}
+
+/*Animations*/
+
+
+@keyframes cardDisplay {
+	0% {
+		opacity: 0;
+		background: rgb(48, 48, 48);
+	}
+	100% {
+		opacity: 1;
+		background: black;
+	}
+}
+
+@keyframes introLineLeft {
+	0% {
+		transform: skewX(-20deg) translateY(100%) scale(1);
+  }
+   25% {
+		transform: skew(-20deg) translateY(0);
+  }
+	
+	50% {
+		transform: skewX(30deg);
+	}
+	75% {
+		transform: skewX(30deg) translateX(-100%);
+	}
+	100% {
+		transform: scale(0);
+	}
+
+}
+
+@keyframes introLineRight {
+	0% {
+		transform: skewX(-20deg) translateY(100%) scale(1);
+  }
+  25% {
+		transform: skew(-20deg) translateY(0);
+  }
+	
+	50% {
+		transform: skewX(30deg);
+	}
+	75% {
+		transform: skewX(30deg) translateX(100%);
+	}
+	100% {
+		transform: scale(0);
+	}
 }

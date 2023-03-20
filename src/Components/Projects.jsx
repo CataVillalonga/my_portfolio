@@ -50,8 +50,8 @@ const projects = [
 
 const Projects = ()=> {
   return (
-    <>
-    <div id='projects' className='projects-title'>
+    <div id='projects' className='projects-wrapper'>
+    <div className='projects-title'>
       <h1>Projects</h1>
     </div>
     <section className='projects-container'>
@@ -77,7 +77,7 @@ const Projects = ()=> {
         )
       })}
     </section>
-    </>
+    </div>
   )
 }
 

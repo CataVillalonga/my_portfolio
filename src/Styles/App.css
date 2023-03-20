@@ -1,10 +1,6 @@
 html {
   scroll-behavior: smooth;
   max-width: 100%;
-  border: 6px solid;
-  border-image-source: linear-gradient(90deg,#1b5e0d,#649d97 70%);
-  border-image-slice: 1;
 }
-
 
 
