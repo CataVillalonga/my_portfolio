@@ -1,8 +1,6 @@
-import photo from '../img/img.jpg'
 import '../Styles/Presentation.css';
 import linkedIn_logo from '../logos/linkedIn.svg'
 import github_logo from '../logos/github.svg'
-import arrow from '../logos/arrow.png'
 
 const Presentation =({setDisplay}) => {
   // const btnHandler = () => {
