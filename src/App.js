@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <Presentation setDisplay={setDisplay}/>
-      <TechStack />
       <main className='main-wrapper' style={{display:`${display}`}}>
+        <TechStack />
         <About />
         <Projects />
       </main>
