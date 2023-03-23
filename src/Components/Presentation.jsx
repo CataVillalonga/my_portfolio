@@ -4,10 +4,11 @@ import linkedIn_logo from '../logos/linkedIn.svg'
 import github_logo from '../logos/github.svg'
 import arrow from '../logos/arrow.png'
 
-const Presentation =(setMainDisplay) => {
-  const btnHandler = () => {
-    setMainDisplay('')
-  }
+const Presentation =({setDisplay}) => {
+  // const btnHandler = () => {
+  //   console.log('banana')
+  //   setDisplay('block')
+  // }
   
   return (
     <section className="presentation-wrapper">
@@ -16,8 +17,12 @@ const Presentation =(setMainDisplay) => {
           <h1 className='card-name'>Catalina Villalonga</h1>
           <p className='card-description'>Full stack Javascript/Typescript Developer</p>
         </div>
+        <div className='socialMedia-wraper'>
+          <a href="https://github.com/CataVillalonga"><img src={linkedIn_logo} alt="linkedIn" className='socialMedia-img'/></a>
+          <a href="https://www.linkedin.com/in/catalina-villalonga-7a272912a/"><img src={github_logo} alt="github" className='socialMedia-img'/></a>
+        </div>
         <div className='glowingEffect-btn'>
-          <a href="#projects" className='glowingEffect-btn-a' onClick={()=>btnHandler()}>Learn more</a>
+          <a href="#teckStack" className='glowingEffect-btn-a' onClick={()=> setDisplay('block')}>Learn more</a>
         </div>
       </div>
     </section>

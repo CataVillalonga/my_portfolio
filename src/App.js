@@ -3,27 +3,22 @@ import Presentation from './Components/Presentation';
 import About from './Components/About';
 import TechStack from'./Components/TechStack'
 import Projects from'./Components/Projects'
-import Collaborations from'./Components/Collaborations'
 import './Styles/reset.css';
 import './Styles/App.css';
 
 
 
 function App() {
-  
-  const [display, setDisplay] = useState('')
+  const [display, setDisplay] = useState('none')
 
-  console.log(display)
-  // `${mainDisplay}`
   return (
     <>
-    <Presentation setMainDisplay={setDisplay}/>
-    <main className='main-wrapper' style={{display:'block'}}>
+      <Presentation setDisplay={setDisplay}/>
       <TechStack />
-      <Projects />
-      <About />
-      <Collaborations />
-    </main>
+      <main className='main-wrapper' style={{display:`${display}`}}>
+        <About />
+        <Projects />
+      </main>
     </>
   );
 }

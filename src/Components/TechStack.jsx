@@ -2,8 +2,8 @@ import '../Styles/TechStack.css';
 
 const TechStack =() => {
   return (
-    <section className='techStack-section'>
-      <h2>Technologies</h2>
+    <section id='techStack' className='techStack-section'>
+      <span className='techStack-section-span'></span>
       <li className='techStack-section-list'>
         <ul>Javascript</ul>
         <ul>Typescript</ul>

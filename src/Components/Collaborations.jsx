@@ -6,6 +6,7 @@ import '../Styles/Collaborations.css';
 const Collaborations =() => {
   return (
     <section id='collaborations' className='collaborations-section'>
+      <span className='collaborations-span'> </span>
       <div className='collaborations-section-title'>
         <h1>Collaborations</h1>
       </div>

@@ -1,3 +1,5 @@
+import salthubImg from '../img/salthub.png'
+import finderImg from '../img/city_finder.png'
 import storeImg from '../img/store.png'
 import blogImg from '../img/blog.png'
 import youtubeImg from '../img/youtube.png'
@@ -6,57 +8,73 @@ import sailingImg from '../img/sailing.png'
 import '../Styles/Projects.css';
 
 const projects = [
-    {
-      image: storeImg,
-      name: 'Online Store',
-      link: 'https://cikc-reloaded-store.netlify.app/',
-      description:
-      'Full-stack application from scratch. This is an e-commerce furniture store with own database',
-      tags: ['React','Bootstrap', 'Express', 'RESTful APIs', 'MongoDB']
-    },
-    {
-      image: youtubeImg,
-      name: 'Catatube',
-      link: 'https://github.com/CataVillalonga/hackday_fullStack',
-      description:
-        'Fullstack application created in 12 hours for hackday, Can make any request directly to youtube',
-      tags: ['React','CSS', 'Express', 'RESTful APIs']
-    },
-    {
-      image: blogImg,
-      name: 'Blog Site',
-      link: 'https://github.com/CataVillalonga/tiny_blog',
-      description:
-        'Blogpost Front end application created to display post from external Api to practice Typescript',
-      tags: ['React', 'CSS', 'Typescript'],
-    },
-    {
-      image: metrieveImg,
-      name: 'Metrieve App',
-      link: 'https://github.com/orgs/metrieve/repositories',
-      description:
-        'MVP Fullstack App for internal use to marketing company based in Egipt',
-      tags: ['React', 'SCSS', 'Typescript','Node', 'PostgreSQL', 'Next'],
-    },
-    {
-      image: sailingImg,
-      name: 'Sailing App',
-      link: 'https://github.com/CataVillalonga',
-      description:
-        'Website created with vanilla Js for practice basic knowledge of html,CSS and Javascript',
-      tags: ['html', 'CSS', 'Javascript']
-    }
+  {
+    image: salthubImg,
+    name: 'Salthub',
+    link: 'https://github.com/orgs/appliedtechnology/teams/team-salthub',
+    description:
+      '*Currently under development* MVP Full-stack internal use application for consultant company based in Stockholm.',
+    tags: ['Next', 'Bootstrap', 'Typescript', 'Figma']
+  },
+  {
+    image: finderImg,
+    name: 'City Finder',
+    link: 'https://city-finder-tau.vercel.app/',
+    description:
+      'React Game : The user needs to find a city in the map. To calculate the score, the distance between the answer and the actual location is deducted from the score.',
+    tags: ['React', 'CSS', 'Typescript', 'Google maps API']
+  },
+  {
+    image: storeImg,
+    name: 'Online Store',
+    link: 'https://cikc-reloaded-store.netlify.app/',
+    description:
+    'Full-stack application: E-commerce furniture store with own Mongo database, AuthO login, cart and checkout. Created in a MOB with agile methodology',
+    tags: ['React','Bootstrap', 'Express', 'RESTful APIs', 'MongoDB']
+  },
+  {
+    image: youtubeImg,
+    name: 'Catatube',
+    link: 'https://github.com/CataVillalonga/hackday_fullStack',
+    description:
+      'Full-stack application: Created in 12 hours for hackday, Can make any request directly to the Youtube API, through own Resfull API. Includes video player',
+    tags: ['React','CSS', 'Express', 'RESTful APIs']
+  },
+  {
+    image: blogImg,
+    name: 'Blog Site',
+    link: 'https://github.com/CataVillalonga/tiny_blog',
+    description:
+      'Front-end application: Displays posts from external Quotes Api. Blog posts are filtered and sort by tags.',
+    tags: ['React', 'CSS', 'Typescript'],
+  },
+  {
+    image: metrieveImg,
+    name: 'Metrieve App',
+    link: 'https://github.com/orgs/metrieve/repositories',
+    description:
+      'MVP Fullstack App for internal use to marketing company based in Egipt',
+    tags: ['React', 'SCSS', 'Typescript','Node', 'PostgreSQL', 'Next'],
+  },
+  {
+    image: sailingImg,
+    name: 'Sailing App',
+    link: 'https://github.com/CataVillalonga',
+    description:
+      'Website created with vanilla Js for practice basic knowledge of html,CSS and Javascript',
+    tags: ['html', 'CSS', 'Javascript']
+  }
 ];
 
 const Projects = ()=> {
   return (
     <div id='projects' className='projects-wrapper'>
+    <span className='projects-span'></span>
     <div className='projects-title'>
       <h1>Projects</h1>
     </div>
     <section className='projects-container'>
       {projects.map((project, i) => {
-
       return (
         <a href={project.link} rel="noopener noreferrer" target="_blank">
           <article key={project.link}className="project-card"  url="https://www.google.com">

@@ -12,6 +12,12 @@
 		box-shadow: 0px -4px 20px rgb(50 50 50 / 46%);
 	}
 
+	.collaborations-span {
+		width: 100%;
+		height: 100px;
+		background-image: linear-gradient(rgb(33 31 31), rgb(52, 48, 48 ))
+	}
+
 	.collaborations-section-title h1{
 		display: flex;
 		justify-content: center;
@@ -20,9 +26,8 @@
 		color: bisque;
 		font-weight: 400;
 		font-style: italic;
-		background-image: linear-gradient(black, white / 79%)
-
 	}
+	
 	.collaborations-section-imgs {
 		display: flex;
 		flex-direction: rows;

@@ -35,6 +35,19 @@
 		padding-top: 25px;
 	}
 
+	.socialMedia-wraper {
+		display: flex;
+		margin-top: 30px;
+		justify-content: space-between;
+		width: 120px;
+	}
+
+	.socialMedia-img {
+		width: 50px;
+    height: 50px;
+    bottom: 0;
+	}
+
 	.card-description {
 		font-size: 25px;
 	}
@@ -70,17 +83,11 @@
 		background: rgb(48, 48, 48);
 	}
 
-	.card-wrapper img {
-		width: 100px;
-		height: 100px;
-		bottom: 0;
-	}
-
 	.glowingEffect-btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 60px;
+		margin-top: 30px;
 	}
 	
 	.glowingEffect-btn-a {
