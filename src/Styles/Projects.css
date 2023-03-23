@@ -1,16 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 200px) {
 
-}
-
-@media screen and (min-width: 1020px) {
 	.projects-wrapper {
 		background: rgb(52, 48, 48 );
 		padding-bottom: 40px;
 	}
 	.projects-container {
 		display: grid;
+		grid-gap: 3rem;
+		width: 100%;
+		max-width: 900px;
+		margin: 31px auto;
+	}
+
+	.projects-container a {
+		text-decoration: none;
+	}
+
+	.projects-title {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-weight: bold;
+		font-size: 2.5rem;
+		padding: 30px;
+		color: bisque;
+		font-family: 'Expletus Sans', cursive;
+	}
+
+
+	.project-card {
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+		background: black;
+		border : 1px solid black;
+		border-radius: 1rem;
+		transition: all 0.3s ease-in-out;
+		margin: 0 1rem;
+		max-height: 30rem;
+		animation: 13s projectDisplay 3s ;
+	}
+
+	.project-card:hover {
+		transition: all 0.3s ease-in-out;
+		transform: scale(1.03);
+		box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 40%);
+	}
+
+	.project-card-img {
+		width: 100%;
+		height: 95%;
+		max-height: 23rem;
+		object-fit: contain;
+		overflow: hidden;
+	}
+
+	.project-card-img img {
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem 1rem 0 0 ;
+		object-fit:cover;
+	}
+
+	.project-card-dtls {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		background: #f7f7f7;
+		display: flex;
+		flex-direction: column;
+		gap: 21px;
+		padding: 10px;
+		border-radius: 0 0 1rem 1rem;
+		justify-content: center;
+		align-items: center;
+	}
+		
+	.project-card-dtls h2 {
+		font-weight: bold;
+		font-size: 1.8rem;
+		color: black;
+	}
+
+	.project-card-dtls p {
+		color: rgb(111 110 109);
+	}
+
+	.project-card-dtls-tags {
+		margin: 10px 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 3px;
+		padding: 10px;
+		margin-bottom: 2rem;
+		color: rgb(49, 48, 48);
+	}
+		
+	.tags {
+		font-size: 16px;
+		background-color: rgb(201 140 53 / 28%);
+		padding: 6px;
+		border-radius: 3px;
+	}
+	
+}
+
+
+@media screen and (min-width: 620px) {
+	.projects-wrapper {
+		background: rgb(52, 48, 48 );
+		padding: 30px;
+	}
+	.projects-container {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 3rem;
 		width: 100%;
@@ -111,6 +215,13 @@
 		border-radius: 3px;
 	}
 }
+
+@media screen and (min-width: 1020px) {
+	.projects-wrapper {
+		padding-bottom: 40px;
+	}
+}
+
 
 /*Animations*/
 
