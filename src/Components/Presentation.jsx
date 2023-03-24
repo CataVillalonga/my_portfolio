@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import '../Styles/Presentation.css';
 import linkedIn_logo from '../logos/linkedIn.svg'
 import github_logo from '../logos/github.svg'
 
 const Presentation =({setDisplay}) => {
-  // const btnHandler = () => {
-  //   console.log('banana')
-  //   setDisplay('block')
-  // }
+
+  const [id, setId] = useState('#')
+
+  const btnHandler = () => {
+    setDisplay('block')
+    setId('#techStack')
+  }
   
   return (
     <section className="presentation-wrapper">
@@ -20,7 +24,7 @@ const Presentation =({setDisplay}) => {
           <a href="https://www.linkedin.com/in/catalina-villalonga-7a272912a/"><img src={github_logo} alt="github" className='socialMedia-img'/></a>
         </div>
         <div className='glowingEffect-btn'>
-          <a href="#teckStack" className='glowingEffect-btn-a' onClick={()=> setDisplay('block')}>Learn more</a>
+          <a href={id} className='glowingEffect-btn-a' onClick={btnHandler}>Learn more</a>
         </div>
       </div>
     </section>

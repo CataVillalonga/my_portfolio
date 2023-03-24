@@ -67,6 +67,7 @@ const projects = [
 ];
 
 const Projects = ()=> {
+
   return (
     <div id='projects' className='projects-wrapper'>
     <span className='projects-span'></span>

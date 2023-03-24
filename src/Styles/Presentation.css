@@ -62,7 +62,7 @@
 		height: 100%;
 		top: 0;
 		left: -50%;
-		animation: introLineLeft 5.0s forwards;
+		animation: introLineLeftMobile 5.0s forwards;
 		border-right: 2px solid white;
 		background: rgb(48, 48, 48);
 		z-index: 1;
@@ -75,7 +75,7 @@
 		height: 100%;
 		top: 0;
 		right: -50%;
-		animation: introLineRight 5.0s forwards;
+		animation: introLineRightMobile 5.0s forwards;
 		border-left: 2px solid white;
 		background: rgb(48, 48, 48);
 	}
@@ -138,6 +138,18 @@
 		font-weight: 900;
 		margin: 30px;
 	}
+
+	.card-wrapper {
+		animation:4.5s cardDisplayDesktop 0.5s forwards;
+	}
+
+	.presentation-wrapper::before {
+		animation: introLineLeft 5.0s forwards;
+	}
+
+	.presentation-wrapper::after {
+		animation: introLineRight 5.0s forwards;
+	}
 	
 	.glowingEffect-btn-a {
 		font-size: 20px;
@@ -147,10 +159,6 @@
 	.glowingEffect-btn-a::before{
 		width: 100%;
 		height: 50px;
-	}
-
-	.card-wrapper {
-		animation:4.5s cardDisplayDesktop 0.5s forwards;
 	}
 }
 
@@ -191,6 +199,26 @@
 	}
 }
 
+@keyframes introLineLeftMobile {
+	0% {
+		transform: skewX(-20deg) translateY(100%) scale(1);
+  }
+   25% {
+		transform: skew(-20deg) translateY(0);
+  }
+	
+	50% {
+		transform: skewX(20deg);
+	}
+	75% {
+		transform: skewX(20deg) translateX(-150%);
+	}
+	100% {
+		transform: scale(0);
+	}
+
+}
+
 @keyframes introLineLeft {
 	0% {
 		transform: skewX(-20deg) translateY(100%) scale(1);
@@ -209,6 +237,25 @@
 		transform: scale(0);
 	}
 
+}
+
+@keyframes introLineRightMobile {
+	0% {
+		transform: skewX(-20deg) translateY(100%) scale(1);
+  }
+  25% {
+		transform: skew(-20deg) translateY(0);
+  }
+	
+	50% {
+		transform: skewX(20deg);
+	}
+	75% {
+		transform: skewX(20deg) translateX(150%);
+	}
+	100% {
+		transform: scale(0);
+	}
 }
 
 @keyframes introLineRight {
