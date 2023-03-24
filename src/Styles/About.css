@@ -26,17 +26,17 @@
 	.about-title h1 {
 		font-family: 'Expletus Sans', cursive;
 		height: 40px;
-		width: 120px;
+		width: 130px;
 		line-height: 40px;
 		vertical-align: middle;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 25px;
 	}
 
 	.about-section p {
 		padding: 0.2rem 2rem;
 		color: rgb(248, 235, 212);
-		font-size: 18px;
+		font-size: 22px;
 	}
 	
 }
